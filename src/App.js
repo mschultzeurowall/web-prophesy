@@ -19,6 +19,18 @@ const App = () => {
         </p>
       </div>
 
+      <div style={{ display: 'flex', gap: '50px', marginBottom: '50px', textDecoration: 'underline' }}>
+        <a href="https://dexscreener.com/solana/FY84ZT1CfK1zKwpZVQoMaY1MMQp8jmnnxCxBRGSTpump" target="_blank" rel="noopener noreferrer" style={styles.iconLink}>
+          DexScreener
+        </a>
+        <a href="https://t.me/theprophesysol" target="_blank" rel="noopener noreferrer" style={styles.iconLink}>
+          Telegram
+        </a>
+        <a href="https://x.com/onlytheprophesy" target="_blank" rel="noopener noreferrer" style={styles.iconLink}>
+          Twitter (X)
+        </a>
+      </div>
+
       <div style={styles.catContainer}>
         <div style={styles.cat}>
           <div style={styles.eyeContainer}>
@@ -31,6 +43,18 @@ const App = () => {
       <p style={styles.footer}>
         A new era of peace and prosperity awaits...
       </p>
+
+      <div style={styles.socialContainer}>
+        <a href="https://dexscreener.com/solana/FY84ZT1CfK1zKwpZVQoMaY1MMQp8jmnnxCxBRGSTpump" target="_blank" rel="noopener noreferrer" style={styles.iconLink}>
+          <i className="fas fa-chart-line" style={styles.icon}></i>
+        </a>
+        <a href="https://t.me/theprophesysol" target="_blank" rel="noopener noreferrer" style={styles.iconLink}>
+          <i className="fab fa-telegram-plane" style={styles.icon}></i>
+        </a>
+        <a href="https://x.com/onlytheprophesy" target="_blank" rel="noopener noreferrer" style={styles.iconLink}>
+          <i className="fab fa-twitter" style={styles.icon}></i>
+        </a>
+      </div>
     </div>
   );
 };
@@ -45,6 +69,7 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: '20px'
   },
   header: {
     textAlign: 'center',
@@ -62,7 +87,8 @@ const styles = {
     maxWidth: '500px',
     margin: '0 auto',
     lineHeight: '1.6em',
-    color: '#c0c0c0'
+    color: '#c0c0c0',
+    textAlign: 'center'
   },
   catContainer: {
     width: '200px',
@@ -98,11 +124,26 @@ const styles = {
     marginTop: '20px',
     fontStyle: 'italic',
     color: '#888',
-    textShadow: '0 0 10px #ff79c6'
+    textShadow: '0 0 10px #ff79c6',
+    textAlign: 'center'
+  },
+  socialContainer: {
+    display: 'flex',
+    gap: '20px',
+    marginTop: '40px',
+    justifyContent: 'center'
+  },
+  iconLink: {
+    color: '#e0e0e0',
+    fontSize: '1.5em',
+    textDecoration: 'none'
+  },
+  icon: {
+    transition: 'color 0.3s ease',
   }
 };
 
-// Keyframe for glowing eyes (inject into global stylesheet or use styled-components)
+// Keyframe for glowing eyes
 const styleSheet = document.styleSheets[0];
 styleSheet.insertRule(`
 @keyframes glow {
